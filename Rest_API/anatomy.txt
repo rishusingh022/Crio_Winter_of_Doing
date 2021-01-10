@@ -1,0 +1,8 @@
+Components of a REST API Request
+Use Chrome’s Developer Tools to monitor the API request made. Let’s look at the different components of the REST API request.
+Request URL: https://www.metaweather.com/api/location/search/?query=san
+Request Method: GET which denotes the type of HTTP request made. GET means data needs to be fetched.
+Request Headers: eg: accept, accept-encoding - used to send additional info like the type of encoding that the requesting application (browser) supports
+Request Body: is empty for the current request but can be used for sending additional information like a file’s content when uploading it to the server.
+
+https://developers.google.com/web/tools/chrome-devtools/network

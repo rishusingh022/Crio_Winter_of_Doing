@@ -1,0 +1,24 @@
+REST stands for REpresentational State Transfer.
+
+API stands for Application Programming Interface, and unfortunately, people will ask you the meaning of each 
+word here. An API is like a waiter in a restaurant. You don’t go into a cafe and walk straight into the
+kitchen to tell the chef what you wanna eat. The waiter does that for you, and that’s exactly what an API
+is - with the client being you, the customer and any resource that can send data, being the chef.
+
+REST APIs are those APIs which follow the guidelines set by the REST architecture. They follow a 
+client-server model where one software program sends a request and the other responds with some data. 
+REST APIs commonly use the HTTP protocol to send requests & receive responses.
+
+JSON (JavaScript Object Notation - how cryptic :| ) is a standard format that is easily "understandable"
+by applications and can be handled well in most languages. So the data format in REST is usually JSON. 
+For example, an Android app can effortlessly utilize data sent by a Node.js server. XML is another popular 
+format for data transfer between applications.
+
+As we discussed earlier, REST API calls are made on top of the HTTP protocol. We can analyse the network
+packets during the API calls to confirm this using Wireshark.
+Wireshark is a popular network analysis tool to capture network packets and display them at a granular level.
+Once these packets are broken down, you can use them for real-time or offline analysis.
+
+https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/ :)(half read)
+https://restishistory.net/blog/do-you-know-the-difference-between-http-and-rest.html
+https://www.metaweather.com/api/

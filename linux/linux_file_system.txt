@@ -1,0 +1,59 @@
+Irrespective of the present working directory, you can run cd /var to take you to /var. 
+Similarly, ls /var can be executed from any working directory and it will always display the contents of /var.
+This is called using the absolute path where we provided the full path to a directory right from the root of 
+the filesystem: /
+
+NAME - name of the command & short description of what it does
+SYNPOSIS - how the command is used
+DESCRIPTION - detailed info on the usage of the command
+
+Which of the following commands can list the contents of the /var/log directory?
+Correct Answer: ls /var/log,cd /; ls var/log,cd /var; ls log,cd /var/log; ls
+
+Feeding Output of a command to the Input of another
+The /proc/meminfo file has info related to the RAM installed in our system. Try using cat to print its content. 
+The first three lines are the attributes MemTotal, MemFree & MemAvailable. What if we needed to print out
+just the value of the MemFree attribute which denotes the amount of free memory?
+We’ll be required to perform a couple of actions.
+Filter for the line in /proc/meminfo containing the attribute MemFree
+Fetch the numerical value in that line by separating that column
+grep command is used to filter/search for text using strings or patterns. 
+It’s usage is grep <pattern> <file>. For us, it’d be grep MemFree /proc/meminfo. 
+You’ll see only the line containing MemFree from /proc/meminfo filtered out. 
+Let’s write it to a file using the redirection operator (>) we learnt in the previous section.
+(The MemFree value is dynamic & hence can be different every time we print it out)
+
+awk can do that for us. It uses space as a field separator (by default space is used as field separator but other field separators can be specified) and separates text into columns. That’d mean, we have 3 words in our line - MemFree:, 918648 & kB. To print out the 2nd word, the usage is awk '{print $2}' memFreeLine.txt where $2 denotes the second word in the line.
+That did the work for us and we have just the free memory in kB printed out to the terminal. Looking back, the memFreeLine.txt file was a by-product which we didn’t actually need. Is there some way to do this without having to create this file?
+Piping is a type of redirection in Linux used to send output of one command to input of another command. We had earlier written the output of grep to a file & then used it as input to awk. Instead of this, we can use the Linux pipe operator (|) to redirect output of grep directly to input of awk.
+
+
+How do you continuously print lines that are being appended to file.log? TRY IT OUT! (Create a "file.log" file and keep adding new lines to the file while the command to continuously print lines is running in another terminal)
+The tail command (without any options) will display the last 10 lines of a file. If you use the -f option, it will interactively print any new lines that are appended to a file. Try: sudo tail -f /var/log/syslog and observe it for some time. Hit CTRL+C to quit.
+
+Data analysis from the command line
+With the Linux terminal power behind us, we’ll apply this to gather statistics/data from standard software logs. Don’t worry if you don’t understand all the commands in the script. This exercise is to just help you understand the power of Linux. You may have to take Linux Basics 2 to comprehend the entire script.
+
+
+We will use an in-built utility on Linux called cron to schedule execution of this script.
+The Cron runs processes on your system at a scheduled time. Cron reads the crontab (cron tables) for predefined commands and scripts that need to be run.
+By using a specific syntax, you can configure a cron job which schedules scripts or other commands to run automatically.
+https://www.whoishostingthis.com/resources/cron/
+https://phoenixnap.com/kb/set-up-cron-job-linux/
+https://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/
+
+up arrow key → will bring up the last command that was executed. Each press will bring up the previous command executed.
+history → will print out a list of the previous commands executed.
+tab key → pressing the tab key can be used to auto-complete the directory and file names while typing paths or filenames.
+
+
+https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/
+https://learncodethehardway.org/unix/bash_cheat_sheet.pdf
+https://docs.google.com/document/d/1Yodppa7kld9O_KQqLoonbdyEaFfHdqIHUG_Xmwb8UhU/edit
+
+The -l flag used with ls lists the contents in long form whereas -t flag sorts the files according to their modification time. What if we need to do both?
+To create the dir1/subdir1 directory, we can use mkdir dir1 and then cd to dir1 and then execute mkdir dir1/subdir1. Can you find out if it’s possible to create the dir1/subdir1 directories using a single mkdir call?
+We can use the -p flag with the mkdir call to create nested directories.
+
+
+Use the rmdir command to delete an empty directory. If the file has contents, rm -rf command will have to be used. -r recursively deletes files in the directory.
