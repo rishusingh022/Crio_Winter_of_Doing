@@ -1,0 +1,22 @@
+The cURL utility
+cURL is like a web-browser, but for the command line.You can make HTTP requests
+using cURL just like in a web-browser. The Response can be seen on the command line or redirected to a file.
+
+curl -X GET https://www.flipkart.com -o ~/flipkart.html
+output will be show in flipkart.html
+In the above curl request, -X allows you to specify the HTTP method to be used.
+curl -X GET http://www.flipkart.com -o flipkart.html You should see the 301 Moved Permanently reponse; just like in Chrome Developer Tools
+We can also print the HTTP Response Headers using this: curl -i -X GET http://www.flipkart.com -o flipkart.html Now, you should see the full
+Response Headers as well.
+If you also want the full details, try the following command: 
+curl -v -X GET http://www.flipkart.com -o flipkart.html A verbose log is printed. 
+You can get the IP Address and the port number from the console output this time.
+You can also instruct curl to follow the Redirect uRL automatically using the -L switch
+curl -v -L -X GET http://www.flipkart.com -o flipkart.html # still using http and not https
+
+
+Postman (Optional)
+Postman is a powerful GUI based application that lets us make HTTP requests easily. 
+To start with, create a new Request in Postman.
+
+

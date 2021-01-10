@@ -1,0 +1,26 @@
+Let’s now see the components of an HTTP request & response by actually creating one. The telnet client 
+helps us connect to other computers on the internet. The format is telnet hostname port. (You can use this 
+online telnet client)
+
+The default port for HTTP is 80 and the telnet command has us connected to the HTTP port on the data.pr4e.org 
+server. We can start sending HTTP Requests to the server now.
+How do we create an HTTP request? Let’s check the HTTP protocol definition doc here to get an idea of how to 
+frame an HTTP 
+
+From the above figure, different parts of the HTTP communication are:
+
+Request Line (HTTP Request)
+Status Line & Response Header (HTTP Response)
+Response Body (HTTP Response)
+
+Try to figure out what some of these response headers mean & what their uses are - for starters, see Last-Modified, Content-Length, Content-Type
+
+
+If we analyse the network packets transferred to/from our computer during the above communication, we’ll be able to understand some things (192.168.43.197 is the client computer & 192.241.136.170, the server)
+
+Client initiates a TCP connection request to the server (Line 1) - this is performed when we execute the telnet command
+HTTP communication happens using this established TCP connection (see the bottom part that lists outs the protocols used for the resource transfer)
+Client sends a HTTP Request line to the server (Line 6) to which the server responds with a HTTP Status code & data as we saw earlier in the telnet
+output
+
+http://telnet.browseas.com/telnet.php

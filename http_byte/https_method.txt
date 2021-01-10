@@ -1,0 +1,39 @@
+GET
+GET requests are used to "get" resources from a server. 
+Check the requests made when you visit https://gitlab.crio.do/users/sign_in in Incognito.
+If we check the first request made, it’s for a resource of type document which is the HTML file. Use the Preview tab to see the HTML rendered. 
+Is it missing something? yes it was missing
+Goto the Response tab & you’ll be able to see the raw HTML data. You’ll be able to see <img> tags. 
+Why aren't the images showing up in the Preview tab then?
+As we saw earlier, we can only specify a single resource in the HTTP request-line at a time meaning 
+that we need a separate HTTP request for fetching any related files (image, css, javascript) the HTML needs.
+Find out an image included in the HTML (look for <img> tags). Can you see a HTTP request for that resource?
+
+POST
+POST requests are used to send some data to the server. 
+Some use cases are to submit data from a web form or to upload a file to the server.
+check out the form section in header
+
+PUT
+PUT requests are used to update data on the server side. This could be for actions
+like changing your Facebook relationship status, updating a student’s marks on the 
+college server after improvement exams etc.
+Visit https://gitlab.crio.do/ and login using Google sign-in if you haven’t already. Open the
+DevTools Networks tab and ensure you’ve the Preserve log option checked.
+
+
+Click on the PUT request sent when you updated the Gitlab status. What is the value of the emoji attribute?
+speech_balloon
+
+Goto https://gitlab.crio.do/users/sign_in. Observe the request made when the page is refreshed. Try to sign-in using some invalid credentials. 
+Again, observe the request made to https://gitlab.crio.do/users/sign_in. What were your observations?
+Iniatially there was no form data section when we filled it with   invalid credentials then 
+The data we filled up show up in form data section under header request
+
+If you were to add 5 images to your HTML file using <img>, how many extra HTTP GET calls will it result in?
+5 extra HTTP GET call, which will retrieve all the images.
+
+Which of the following are true regarding HTTP POST and HTTP PUT requests?
+POST request is usually used to create a new resource whereas PUT is usually used to update an existing resource. Nevertheless,
+ both can be used to create a new resource based on the requirement.
+ Submitting a form data is usually a POST request whereas updating your profile picture could be a PUT request

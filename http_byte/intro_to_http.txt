@@ -1,0 +1,85 @@
+It starts with a client machine sending requests in the HTTP format. The server machine receives the 
+request, understands it and takes appropriate action. The response again has to be formatted in a specific 
+manner adhering to the HTTP protocol for the client to make sense of it.
+
+ctrl+shift+i developer tap
+open network search for doc file and u will Observe the following things
+Observe the following details for this HTTP request in the "General" section
+Request URL - URL of the resource fetched
+Request Method - denotes the action to be done. "GET" is for fetching some resource
+Status Code - denotes how the server responded to the request. "200 OK" means a successful request and as 
+this is a “GET” request, server will have sent some data back i.e, website’s HTML content
+
+Is this a special port number? Is there any relationship between the port number used and the Request URL? 
+Any application can bind() to any available port,That's because the port number itself is just a 16-bit 
+field in the packet headers and there is no practical way for the operating system to know what is going 
+on at the application level.External to an application you can use NAT (Network Address Translation) in a 
+router or firewall to redirect any port number to any other port number.
+
+
+Why is there a lock icon in the address bar of your browser?
+A padlock icon, or lock icon, displayed in a web browser indicates a secure mode where communications between 
+browser and web server are encrypted. This type of connection is designed to prevent anyone from reading
+or modifying the data you exchange with the website.
+
+Uniform Resource Locator (URL)
+A URL (Uniform Resource Locator) is used to uniquely identify a resource over the web. URL has the following syntax:
+protocol://hostname:port/path-and-file-name
+Protocol: The application-level protocol used by the client and server, e.g., HTTP, FTP, and telnet.
+Hostname: The DNS domain name (e.g., www.nowhere123.com) or IP address (e.g., 192.128.1.2) of the server.
+Port: The TCP port number that the server is listening for incoming requests from the clients.
+Path-and-file-name: The name and location of the requested resource, under the server document base directory.
+
+Request Line
+request-method-name request-URI HTTP-version
+request-method-name: HTTP protocol defines a set of request methods, e.g., GET, POST, HEAD, and OPTIONS. The client can use one of these methods to send a request to the server.
+request-URI: specifies the resource requested.
+HTTP-version: Two versions are currently in use: HTTP/1.0 and HTTP/1.1.
+GET /test.html HTTP/1.1
+HEAD /query.html HTTP/1.0
+POST /index.html HTTP/1.1
+
+Request Headers
+The request headers are in the form of name:value pairs. Multiple values, separated by commas, can be specified.
+request-header-name: request-header-value1, request-header-value2, ...
+Examples of request headers are:
+Host: www.xyz.com
+Connection: Keep-Alive
+Accept: image/gif, image/jpeg, */*
+Accept-Language: us-en, fr, cn
+
+
+Status Line
+The first line is called the status line, followed by optional response header(s).
+The status line has the following syntax:
+HTTP-version status-code reason-phrase
+HTTP/1.1 200 OK
+HTTP/1.0 404 Not Found
+HTTP/1.1 403 Forbidden
+
+Response Headers
+The response headers are in the form name:value pairs:
+response-header-name: response-header-value1, response-header-value2, ...
+Examples of response headers are:
+Content-Type: text/html
+Content-Length: 35
+Connection: Keep-Alive
+Keep-Alive: timeout=15, max=100
+
+HTTP Request Methods
+HTTP protocol defines a set of request methods. A client can use one of these
+request methods to send a request message to an HTTP server. The methods are:
+GET: A client can use the GET request to get a web resource from the server.
+HEAD: A client can use the HEAD request to get the header that a GET request would have obtained. 
+      Since the header contains the last-modified date of the data, this can be used to check against
+      the local cache copy.
+POST: Used to post data up to the web server.
+PUT: Ask the server to store the data.
+
+Is it possible to tell the server Flipkart used based on any of the HTTP Response headers the server sent back?
+Not unless you give me access to Flipkart server.
+Yes, it is Tomcat.
+Yes, it is Nginx.
+Yes, it is Microsoft IIS.
+Correct
+Correct Answer: Yes, it is Nginx.

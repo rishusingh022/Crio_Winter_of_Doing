@@ -1,0 +1,3 @@
+Execute curl -V in the terminal to check if the cURL utility is installed. 
+If installed, the output will be as shown below. Download & install cURL utility if not installed - Reference.
+(Optional) Download & install Postman application on your local computer from here

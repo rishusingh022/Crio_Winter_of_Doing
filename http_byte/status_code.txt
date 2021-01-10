@@ -1,0 +1,21 @@
+What is the status code you get when you type http://crio.do?
+301 moved prmanently..
+
+
+Status codes - 2xx
+The 2xx family of status codes or status codes 200-299 signifies the HTTP request was successfully
+received & understood by the server. We’ve been seeing the 200 status codes all the way until now.
+That’s what we get when the server returns some resource for our request.
+
+Status codes - 4xx
+Getting a 4xx status code tells us that there was an error in the HTTP request sent by the client - that 
+would be the browser if we are visiting web pages.
+Check the status code on trying to fetch some random resource from a website eg: 
+https://www.flipkart.com/crio-do
+There are a couple more HTTP status code families - 1xx & 5xx. 1xx is for information purposes while 5xx
+signifies there was a server error.
+
+Status codes - 3xx
+3xx family of status codes denotes that further action must be taken to complete the HTTP request made.
+Try navigating to http://www.flipkart.com instead of https://www.flipkart.com (http instead of https).
+Observe the headers of the first HTTP request again this time.

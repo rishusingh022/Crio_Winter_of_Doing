@@ -1,0 +1,17 @@
+HTTP is an application layer protocol that allows transfer of data between machines. Most common use of HTTP is in loading web pages 
+where HTML documents are fetched along with the other resources like images, CSS & JavaScript that it uses
+HTTP Request Method - used by the system requesting the resource to specify the type of request
+GET - can be used to fetch web pages
+POST - can be used to submit login data
+PUT - can be used to update data
+Other HTTP methods are HEAD, DELETE, OPTIONS, CONNECT, TRACE & PATCH
+
+HTTP Response Status Code - seen in the response message. Used by the system receiving the request, to specify the result of the request.
+1xx - Informational responses
+2xx - Successful responses eg: 200 OK - Request successfully completed
+3xx - Redirects eg: 301 Moved Permanently - Requested resource was moved permanently to a different location
+4xx - Client errors eg: 404 Not Found - Requested resources wasn’t found
+5xx - Server errors
+
+answer for curioes cat question(pending)
+https://docs.google.com/document/d/17t3xFlMLsyxpHlu2ltFwT_JKz4KcYE6vqCw0-LUrG3Y/edit
