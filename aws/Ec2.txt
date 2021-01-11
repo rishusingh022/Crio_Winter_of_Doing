@@ -1,0 +1,42 @@
+Create an EC2 instance
+Elastic Compute Cloud (EC2) is the IaaS(Infrastructure as a Service) offering from AWS - you can rent out
+servers with customizable memory, storage and bandwidth. These servers can then be used for purposes hosting
+your applications, which is exactly what we’re going to do.
+
+SSH(Secure Socket Shell) is a network protocol that allows you to sign in to your servers from a 
+remote computer. You might have seen SSH referred to on GitHub - "Clone using HTTPS or SSH". Here, 
+we use SSH to securely log in to the server, using the pem file we have.
+# Usually downloads go to ~/Downloads/
+chmod 400 <path-to-your-pem-file>
+ssh -i "crio-demo.pem" ubuntu@<your-ec2-url>
+# Example
+ssh -i "~/Downloads/crio-demo.pem" ubuntu@ec2-13-233-100-101.ap-south-1.compute.amazonaws.com
+You’ll find your EC2 URL under the heading ‘Public IPv4 DNS’
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html#putty-private-key for windows user
+
+Deploying app backend server
+You will be deploying the app backend for QEats app - which is a Swiggy/UberEats like food-ordering app.
+Once you start the backend server, you can connect to it from your app anywhere in the world and have some 
+fun.
+Installing Docker
+APT is a packet manager in Linux. The following instructions are similar to installing an EXE file in 
+windows or an app in Android.
+Type the following instructions the AWS instance terminal 
+sudo apt-get update
+sudo apt-get install wget
+wget -qO- https://get.docker.com/ | sh
+sudo usermod -aG docker $USER
+sudo service docker start
+newgrp docker
+sudo apt install -y telnet
+sudo docker run -d -m 800m -v /tmp/container:/tmp:rw -p 8081:8081 criodo/qeats-server
+
+Think of Docker Hub as an App store for docker images. For the purposes of this Byte, 
+you don’t have to understand all the docker instructions,
+Type telnet localhost 8081 from the same AWS instance and you should see the following
+output if everything worked fine -
+
+https://learn.dev.crio.do/home/me/ME_DOCKER1 (docker byte)
+Telnet is a network protocol used to virtually access a computer and to provide a two-way, collaborative and text-based...
+

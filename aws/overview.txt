@@ -1,0 +1,26 @@
+Background
+
+Cloud
+Buzz word that everyone uses, but is a very simple concept. In very simple terms,
+Cloud is a bunch of hardware resources like storage or compute that someone maintains for you.
+Eg: Apple maintains your photos in iCloud instead of your harddisk, 
+AWS provides you with a server (think desktop computer) to host your website instead of doing it
+from a machine at your house.
+
+AWS
+Amazon Web Services (AWS) is one of the most popular cloud service providers out in the market. 
+They provide different kinds of services for companies and individuals.
+
+Some of the popular offerings from AWS are:
+
+Virtual machines (EC2)
+
+VM - in simple terms, computers with some configuration; eg: 2cpu, 16GB RAM, 20 GB hard disk
+Storage (S3)
+Load Balancers (ELB)
+You’ll be using AWS EC2 virtual machines in this Byte.
+
+Docker
+Docker is a containerization technology - you can think of them as tiny VMs. You don’t have to know the
+details of docker for this Byte. But feel free to dig deeper if you are curious - find our bytes
+Docker-1(https://learn.crio.do/home/me/ME_DOCKER1) and Docker-2(https://learn.crio.do/home/me/ME_DOCKER2)
