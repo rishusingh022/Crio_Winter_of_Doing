@@ -1,0 +1,145 @@
+/* CSS selector to set style for the <body> element */
+/*referance linkls
+https://www.w3schools.com/html/html_css.asp
+https://css-playground.com/view/53/box-model-introduction-playground-->understanding the margin padding border
+https://www.w3schools.com/css/css_border.asp -->for border
+https://www.w3schools.com/cssref/sel_all.asp
+https://www.w3schools.com/css/css_dimension.asp
+https://www.w3schools.com/cssref/pr_class_display.asp
+https://www.w3schools.com/html/html_classes.asp
+https://www.w3schools.com/html/html_id.asp
+https://www.w3schools.com/html/html_classes.asp
+https://www.w3schools.com/cssref/css_selectors.asp
+https://www.developintelligence.com/blog/2016/04/css-class-vs-id-which-one-to-use/
+https://www.w3schools.com/howto/howto_css_fixed_footer.asp
+https://youtu.be/K74l26pE4YA flex box ke liye imp hai
+https://bit.ly/3hVb5iM flex playground
+https://yoksel.github.io/flex-cheatsheet/
+https://www.w3schools.com/css/css_link.asp
+https://www.w3schools.com/cssref/pr_pos_overflow.asp
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+https://www.w3schools.com/css/css3_images.asp
+https://unsplash.com/
+https://stackoverflow.com/questions/10036156/whats-the-difference-between-css-classes-foo-bar-without-space-and-foo-bar/10036181#10036181
+https://medium.com/@mustafa.abdelmogoud/how-the-browser-renders-html-css-27920d8ccaa6
+https://stackoverflow.com/questions/3170772/what-does-auto-do-in-margin0-auto/3170774#3170774
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
+
+https://docs.google.com/document/d/1zfXv_ggbBMjicwbSnlGwL4vIA1ug1skqusG7alfE6-k/edit
+
+The total width of the <div> elements is calculated by
+Total width of element = width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
+If 25% of the screen resolves to 120px, the total width of the element in this case would be
+Total width of element = 120px + 5px + 5px + 0px + 0px + 0px + 0px = 130px
+
+margin - is the distance to keep from the neighboring elements
+border - is the border for the HTML element’s region
+padding - is the space, content of the element likes to keep from its border
+height and width - specifies the height and width of the content area
+
+HTML provides a class attribute to group elements. The class name can be
+used to apply a particular style to all the elements in that class.
+
+Now, how would you set a CSS style for just the "Topics learnt" <div> element?
+The HTML id attribute can be used to uniquely specify an HTML element.
+Now, how would you set a CSS style for just the "Topics learnt" <div> element?
+The HTML id attribute can be used to uniquely specify an HTML element.
+Priority of rule with selector specificity: (1, 0, 0) > (0, 1, 0) > (0, 0, 1)
+then CSS gives priority to the rule that has the more specific selector. 
+An ID selector is more specific than a class selector, which in turn is more specific than a tag selector.
+class is useful to identify a group of same or different tag types easily and apply CSS styling for the
+entire group elements
+
+CSS Flexbox is used to automatically arrange HTML elements according to the screen size i.e, the page 
+will look clean viewed on a laptop or on mobile. Flexbox works by setting an HTML element as a flex container
+and positions the child elements within the flex container element.
+The justify-content property of the flex container can be used to change how the elements are aligned across
+the main axis (horizontal axis here).
+Use the flex-wrap property on the flex container to split the elements into multiple lines when required
+flex-direction property to change the main axis of the flex container.
+The align-items property is used to align the elements across the cross axis (vertical axis here).
+You’ll see that the large text overflows past the element when a fixed height is set
+When height isn’t set, the element expands its height to hold the large piece of text completely.
+As the default value for align-items is stretch, height of other elements in the same row (main axis) will also be matched
+Setting align-items: flex-start; sets the height of the containers based on their text content
+
+
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* CSS selector to set style for the <body> element */
+body {
+  /* Set the font of text displayed */
+  font-family: Verdana;
+  /* Set the background color */
+  background-color: lightgrey;
+}
+
+h1 {
+  /* Set border around the element */
+  border: 1px solid black;
+  /* Set text color */
+  color: white;
+}
+
+h3 {
+  width: 100%;
+  height: 30px;
+  background: white;
+  /* Shorthand to set padding of 10px on all sides */
+  padding: 10px;
+}
+
+.tile {
+  background-color: #999999;
+  margin: 5px;
+  /* Set padding of 10px on top/bottom and 5px on right/left */
+  padding: 10px 5px;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  /* Show a scroll if text overflows but not otherwise */
+  overflow: auto;
+}
+
+#topics-learnt {
+  font-family: "Courier New";
+}
+
+.container {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#title {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #efefef;
+  text-align: center;
+}
+
+/* Change the color of the link on hovering */
+a:hover {
+  color: red;
+}
+
+.hero-image img {
+  /* Set a specific height */
+  height: 30vh;
+  width: 100%;
+}

@@ -1,0 +1,78 @@
+/* Set default margin and padding for all elements to 0 */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* CSS selector to set style for the <body> element */
+body {
+  /* Set the font of text displayed */
+  font-family: Verdana;
+  /* Set the background color */
+  background-color: lightgrey;
+}
+
+h1 {
+  /* Set border around the element */
+  border: 1px solid black;
+  /* Set text color */
+  color: white;
+}
+
+h3 {
+  width: 100%;
+  height: 30px;
+  background: white;
+  /* Shorthand to set padding of 10px on all sides */
+  padding: 10px;
+}
+
+.tile {
+  background-color: #999999;
+  margin: 5px;
+  /* Set padding of 10px on top/bottom and 5px on right/left */
+  padding: 10px 5px;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  /* Show a scroll if text overflows but not otherwise */
+  overflow: auto;
+}
+
+#topics-learnt {
+  font-family: "Courier New";
+}
+
+.container {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#title {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #efefef;
+  text-align: center;
+}
+
+/* Change the color of the link on hovering */
+a:hover {
+  color: red;
+}
+
+.hero-image img {
+  /* Set a specific height */
+  height: 30vh;
+  width: 100%;
+}

@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  /* CSS selector to set style for the <body> element */
+  body {
+    /* Set the font of text displayed */
+    font-family: Verdana;
+    /* Set the background color */
+    background-color: lightgrey;
+  }
+  
+  h1 {
+    /* Set border around the element */
+    border: 1px solid black;
+    /* Set text color */
+    color: white;
+  }
+  
+  h3 {
+    color: white;
+  }
+  
+  div {
+    background-color: #999999;
+    margin: 5px 0px 5px 0px;
+    padding: 10px 5px;
+    height: 200px;
+    width: 20%;
+  }
+  

@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* CSS selector to set style for the <body> element */
+body {
+  /* Set the font of text displayed */
+  font-family: Verdana;
+  /* Set the background color */
+  background-color: lightgrey;
+}
+
+h1 {
+  /* Set border around the element */
+  border: 1px solid black;
+  /* Set text color */
+  color: white;
+}
+
+h3 {
+  color: white;
+  width: 100%;
+}
+
+.tile {
+  background-color: #999999;
+  margin: 5px;
+  padding: 10px 5px;
+  height: 200px;
+  width: 20%;
+}
+
+#topics-learnt {
+  font-family: "Courier New";
+}
+
+.container {
+  padding: 100px 0px 0px 0px;
+  margin: 10px;
+  /* background-color: white; */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* align-items: flex-start; */
+}
