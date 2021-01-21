@@ -1,0 +1,134 @@
+<!-- Tells browser HTML5 is used -->
+<!DOCTYPE html>
+
+<!-- Parent tag of all other tags -->
+<html>
+  <!-- Contains tags to set metadata for the HTML document -->
+  <head>
+    <!-- Set text to be shown on the browser's title bar -->
+    <title>JavaScript tutorials</title>
+  </head>
+  <!-- Contains tags to set content of the HTML document -->
+  <body>
+      <script language="JavaScript" type="text/javascript">
+            document.write(Number.MAX_VALUE+"<br/>");
+            document.write(Number.MIN_VALUE+"<br/>");
+            var samp_str = "here is a sample escape characters \"\'\\ \t";
+            document.write(samp_str+"<br/>");
+            var first_str = "hello ";
+            var second_str = "swapnil";
+            var combined = first_str + second_str;
+            document.write(combined+"<br/>");
+            document.write(combined.length+"<br/>");
+            document.write(combined.substring(6,13)+"<br/>");
+            document.write(combined.indexOf('s')+"<br/>");
+
+            var str_var = "5";
+            var num_var = 10;
+            var total = num_var + str_var; // Converts a number into a string
+            var mult_total = num_var * str_var; // Converts a number into a string
+            document.write("5 + 10 = " + total +"<br />");
+            document.write("5 * 10 = " + mult_total +"<br />");
+
+            
+        // Force Datatype Conversion
+            total = num_var + Number(str_var);
+            document.write("5 + 10 = " + total +"<br />");
+            var num_var2 = String(num_var);
+            document.write(num_var + num_var +"<br />");
+            document.write(num_var + num_var2 +"<br />");
+            // Convert Float to Fixed Length String
+            var float_var = 3.141592653589793238;
+            var float_str = float_var.toFixed(5);
+            document.write("Shortened PI " + float_str +"<br />");
+            document.write("Integer PI " + parseInt(float_var) +"<br />");
+            document.write("Datatype of float_var " + typeof(float_var) +"<br />");
+            document.write("Datatype of float_str " + typeof(float_str) +"<br />");
+
+            
+            bool_var = Boolean(23);
+            document.write("Boolean of 23 " + bool_var +"<br />");         
+            // Comparison Operators
+            var rand_num1 = 5;
+            var rand_num2 = 10;
+            document.write("Is 5 > 10: " + (rand_num1 > rand_num2) +"<br />");
+            document.write("Is 5 >= 10: " + (rand_num1 >= rand_num2) +"<br />");
+            document.write("Is 5 < 10: " + (rand_num1 < rand_num2) +"<br />");
+            document.write("Is 5 <= 10: " + (rand_num1 <= rand_num2) +"<br />");
+            document.write("Is 5 == 10: " + (rand_num1 == rand_num2) +"<br />");
+            document.write("Is 5 != 10: " + (rand_num1 != rand_num2) +"<br />");
+            document.write("Is 5 > 10 and 5 != 10: " + ((rand_num1 > rand_num2) && (rand_num1 != rand_num2))+"<br />");
+            document.write("Is 5 > 10 or 5 != 10: " + ((rand_num1 > rand_num2) || (rand_num1 != rand_num2))+"<br />");
+            document.write("Opposite of 5 != 10: " + !(rand_num1 != rand_num2) +"<br />");
+            var vehicles = new Array("car", "truck", "van");
+            document.write("The second item in the array is: " + vehicles[1] +"<br />");
+            for(i in vehicles)
+            {
+                document.write("Values in the array: " + vehicles[i] +"<br />");
+            }
+            var rand_var = (5 < 10) ? "5 is less than 10" : "5 is greater than 10";
+            document.write("Research has found that " + rand_var +"<br />");
+            if (5 > 10)
+            {  
+                document.write("5 is greater than 10" +"<br />");
+            }
+            else if (5 < 10)
+            {
+                document.write("5 is less than 10" +"<br />");
+            }
+            else
+            {
+                document.write("5 is equal to 10" +"<br />");
+            }
+            var state = "Pennsylvania";
+            switch(state) {
+                case "California":
+                    document.write("Better weather than PA" +"<br />");
+                    break;
+                case "Alaska":
+                    document.write("Worse weather than PA" +"<br />");
+                    break;
+                case "Pennsylvania":
+                    document.write("Same as me" +"<br />");
+                    break;
+                default:
+                    document.write("I don't know where you live" +"<br />");
+                    break;
+            }
+            var count = 1;
+            while( count <= 10 )
+            {
+                /*if(count == 5)
+                {
+                    break;
+                } */
+                /* if(count % 2)
+                {
+                    count++;
+                    continue;
+                } */
+                document.write(count +"<br />");
+                count++;
+
+            }
+            var count = 10;
+            do {
+                document.write(count +"<br />");
+                count--;
+            } while (count > 10);
+            for(var count = 0; count <=10; count++)
+            {
+                document.write(count +"<br />");
+            }
+            function addThese(a,b)
+            {
+                return a+b;
+            }
+            document.write("5 + 25 = " + addThese(5,25) + "<br />");
+
+      </script>
+      <noscript>
+          this site is based on javascripts
+      </noscript>
+  </body>
+</html>
